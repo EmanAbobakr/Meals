@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet, Pressable, Platform } from "react-native";
 
-export function Category({ data }) {
+export function Category({ data, onPress }) {
   return (
     <View style={[styles.gridItem, { backgroundColor: data.color }]}>
       <Pressable
         android-ripple={{ color: "#ccc" }}
         style={({ pressed }) => [pressed ? styles.buttonPressed : null]}
+        onPress={onPress}
       >
         <View>
           <Text style={styles.title}>{data.title}</Text>
