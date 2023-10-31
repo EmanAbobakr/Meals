@@ -3,7 +3,9 @@ import { Meals } from "../data/DummyData";
 import { Meal } from "../components/Meal";
 
 export function MealsScreen({ navigation, route }) {
-  function pressHandler(meal) {}
+  function pressHandler(meal) {
+    navigation.navigate("Details", meal);
+  }
 
   const displayedMeals = Meals.filter((meal) =>
     meal.categoryId.includes(route.params.id)

@@ -3,6 +3,7 @@ import { CategoriesScreen } from "./screens/CategoriesScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { MealsScreen } from "./screens/MealsScreen";
+import { DetailsScreen } from "./screens/DetailsScreen";
 import { StatusBar } from "expo-status-bar";
 
 const Stack = createNativeStackNavigator();
@@ -35,6 +36,7 @@ export default function App() {
               return { title: route.params.title };
             }}
           ></Stack.Screen>
+          <Stack.Screen name="Details" component={DetailsScreen}></Stack.Screen>
         </Stack.Navigator>
       </NavigationContainer>
     </>
