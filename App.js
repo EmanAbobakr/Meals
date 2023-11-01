@@ -11,6 +11,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     // you can pass an obj or an arrow fun to "options"
+    // the value of headerRight should be a a component function (If you want this component interact directly with the screen you need put it in the screen itself)
     <>
       <StatusBar style="light" />
       <NavigationContainer>
